@@ -3,14 +3,14 @@
 
 ## 📚 Ringkasan Materi & Progres Mingguan
 
-| Pertemuan | Topik / Fokus Utama | Output / Deliverables |
-|---|---|---|
-| **01** | Kontrak, RPS & Relevansi Mobile | Diskusi & Pengenalan Ekosistem |
-| **02** | Konsep Android & Arsitektur | Analisis Arsitektur Aplikasi |
-| **03** | Platform & Development Environment | Environment Setup & Basic Run |
-| **04** | Komponen UI/UX Flutter | Kartu Profil Mahasiswa & Responsivitas Layout |
-| **05** | User Interaction & Navigation | Tugas Aplikasi Aktivitas Belajar (*Study Planner*) & Latihan Provider |
-| **06+** | Materi Pertemuan Berikutnya | Diperbarui secara berkala sesuai modul |
+| Pertemuan | Topik / Fokus Utama | Output / Deliverables | Demo                                             | Materi |
+|---|---|---|--------------------------------------------------|--------|
+| **01** | Kontrak, RPS & Relevansi Mobile | Diskusi & Pengenalan Ekosistem | -                                                |_soon_|
+| **02** | Konsep Android & Arsitektur | Analisis Arsitektur Aplikasi | -                                                | _soon_|
+| **03** | Platform & Development Environment | Environment Setup & Basic Run | -                                                |_soon_|
+| **04** | Komponen UI/UX Flutter | Kartu Profil Mahasiswa & Responsivitas Layout | -                                                |_soon_|
+| **05** | User Interaction & Navigation | Tugas Aplikasi Aktivitas Belajar (*Study Planner*) & Latihan Provider | [Demo Pertemuan 5](https://youtu.be/0yS6mQI-ASs) |_soon_|
+| **06+** | Materi Pertemuan Berikutnya | Diperbarui secara berkala sesuai modul | -                                                | _soon_|
 
 ### 🚀 Cara Menjalankan Proyek
 
@@ -41,3 +41,4 @@ indiv-pemmob/
 │   ├── screens/        # Screen / halaman aplikasi (6 layar utama)
 │   ├── main.dart       # Entry point utama (Study Planner)
 │   └── main_*.dart     # Entry point latihan modul terpisah
+└── pubspec.yaml

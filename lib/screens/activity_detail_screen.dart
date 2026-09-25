@@ -8,6 +8,36 @@ class ActivityDetailScreen extends StatelessWidget {
 
   const ActivityDetailScreen({super.key, required this.activityId});
 
+  void _showDeleteDialog(BuildContext context, PlannerStore store, String id) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Konfirmasi Hapus'),
+        content: const Text('Apakah Anda yakin ingin menghapus aktivitas ini?'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Batal'),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red,
+            ),
+            onPressed: () {
+              Navigator.pop(ctx); // Tutup dialog konfirmasi
+              store.deleteActivity(id); // Hapus data dari Provider
+              Navigator.pop(context); // Kembali ke halaman sebelumnya
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Aktivitas berhasil dihapus')),
+              );
+            },
+            child: const Text('Hapus', style: TextStyle(color: Colors.white)),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final store = context.watch<PlannerStore>();
@@ -37,13 +67,7 @@ class ActivityDetailScreen extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(Icons.delete, color: Colors.red),
-            onPressed: () {
-              store.deleteActivity(activity.id);
-              Navigator.pop(context);
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Aktivitas berhasil dihapus')),
-              );
-            },
+            onPressed: () => _showDeleteDialog(context, store, activity.id),
           ),
         ],
       ),
